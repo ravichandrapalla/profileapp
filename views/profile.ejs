@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+        background-color: #f7f7f7;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      .btn-change-password {
+        background-color: #2980b9;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .btn-logout {
+        background-color: #d12727;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .user-img img {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-right: 40px;
+      }
+
+      .user-details p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+      }
+
+      .user-details strong {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Dashboard</h1>
+        <form action="/changepassword" method="POST">
+          <button class="btn-change-password">Change Password</button>
+        </form>
+        <form action="/logout" method="POST">
+          <button class="btn-logout">logOut</button>
+        </form>
+      </div>
+      <div class="user-info">
+        <div class="user-img">
+          <img src="profile-photo.jpg" alt="Profile Photo" />
+        </div>
+        <div class="user-details">
+          <p><strong>Name:</strong> JohnDoe</p>
+          <p><strong>Username:</strong> JohnDoe</p>
+          <p><strong>Email:</strong> johndoe@example.com</p>
+          <p><strong>Phone Number:</strong> +1 (555) 123-4567</p>
+          <p><strong>State:</strong> New York</p>
+          <p><strong>Country:</strong> United States</p>
+          <p><strong>College Name:</strong> University of California</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
+  </body>
+</html>
